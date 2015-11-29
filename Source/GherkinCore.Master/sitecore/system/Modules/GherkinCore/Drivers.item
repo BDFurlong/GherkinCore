@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {CFDC5CA6-672E-4F94-8B99-CEA51D1986E8}
+database: master
+path: /sitecore/system/Modules/GherkinCore/Drivers
+parent: {24E0393B-74C3-4C4D-BC95-10C40F51646D}
+name: Drivers
+master: {00000000-0000-0000-0000-000000000000}
+template: {D9B7CD33-12EC-464A-A7D8-27E69D37BDCA}
+templatekey: GherkinCore Folder
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{333AE555-2CB0-4174-92D3-D34B9A68927C}
+----version----
+language: en
+version: 1
+revision: c9828795-9713-48e5-90b8-9df36e6f00dd
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20151107T151706Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c9828795-9713-48e5-90b8-9df36e6f00dd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20151107T151734Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

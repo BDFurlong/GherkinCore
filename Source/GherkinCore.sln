@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinCore.Base", "Gherkin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinCore.Rules", "GherkinCore.Rules\GherkinCore.Rules.csproj", "{8B14974B-5117-4A4C-90E6-9C2A35C3AA56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinCore.Common", "GherkinCore.Common\GherkinCore.Common.csproj", "{17F974EA-A81D-4F65-AE04-E951F3236A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GherkinCore.Interfaces", "GherkinCore.Interfaces\GherkinCore.Interfaces.csproj", "{493AA6CE-4047-4D56-9CDF-365FE925EC04}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "GherkinCore.Core", "GherkinCore.Core\GherkinCore.Core.scproj", "{0D1C9FF3-E36A-4902-B870-30E915E21378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +41,20 @@ Global
 		{8B14974B-5117-4A4C-90E6-9C2A35C3AA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B14974B-5117-4A4C-90E6-9C2A35C3AA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B14974B-5117-4A4C-90E6-9C2A35C3AA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F974EA-A81D-4F65-AE04-E951F3236A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F974EA-A81D-4F65-AE04-E951F3236A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F974EA-A81D-4F65-AE04-E951F3236A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F974EA-A81D-4F65-AE04-E951F3236A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493AA6CE-4047-4D56-9CDF-365FE925EC04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493AA6CE-4047-4D56-9CDF-365FE925EC04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493AA6CE-4047-4D56-9CDF-365FE925EC04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493AA6CE-4047-4D56-9CDF-365FE925EC04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1C9FF3-E36A-4902-B870-30E915E21378}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
