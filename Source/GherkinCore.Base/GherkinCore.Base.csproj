@@ -60,6 +60,7 @@
     <Compile Include="Model\Scenario.cs" />
     <Compile Include="Model\ScenarioResult.cs" />
     <Compile Include="Model\TestGroup.cs" />
+    <Compile Include="Model\TestSettings.cs" />
     <Compile Include="Model\TestStep.cs" />
     <Compile Include="Pipelines\GherkinCoreReportingPipelineArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

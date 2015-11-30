@@ -19,7 +19,7 @@ namespace GherkinCore.Base.Rules
         public IWebElement CurrentElement { get; set; }
         public Database ContentDatabase { get; set; }
 
-        public GherkinRuleContext()
+        public GherkinRuleContext(TestSettings settings)
         {
             TestSteps = new List<TestStep>();
             ContentDatabase = Sitecore.Context.ContentDatabase;

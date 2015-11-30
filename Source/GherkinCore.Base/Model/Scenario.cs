@@ -43,7 +43,7 @@ namespace GherkinCore.Base.Model
 
         private void CreateRuleContext()
         {
-            RuleContext = new GherkinRuleContext();
+            RuleContext = new GherkinRuleContext(new TestSettings());
         }
 
         private ScenarioResult CreateScenarioResult()

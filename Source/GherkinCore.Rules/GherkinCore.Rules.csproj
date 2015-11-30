@@ -54,6 +54,7 @@
     <Compile Include="Rules\Selenium\Actions\WhenNavigateRefresh.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateToItem.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateToUrl.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenScreenshotTaken.cs" />
     <Compile Include="Rules\Selenium\Conditions\GivenDriverCondition.cs" />
   </ItemGroup>
   <ItemGroup>
