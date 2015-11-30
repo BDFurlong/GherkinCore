@@ -1,6 +1,5 @@
 ﻿using GherkinCore.Base.Rules;
 using GherkinCore.Base.Util;
-using Sitecore.Data;
 using Sitecore.Rules.Conditions;
 
 namespace GherkinCore.Rules.Rules.Selenium.Conditions
@@ -11,7 +10,7 @@ namespace GherkinCore.Rules.Rules.Selenium.Conditions
 
         protected override bool Execute(T ruleContext)
         {
-            var driverItem = ruleContext.GetConfigurationItem(DriverName);
+            var driverItem = ruleContext.GetConfiguratioItem(DriverName);
 
             if (driverItem == null)
             {

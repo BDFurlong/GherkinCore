@@ -5,7 +5,6 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.PhantomJS;
-using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Safari;
 
 namespace GherkinCore.Base.Util

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using GherkinCore.Base.Model.Results;
 using GherkinCore.Common;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;

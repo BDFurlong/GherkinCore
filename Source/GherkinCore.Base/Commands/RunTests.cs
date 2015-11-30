@@ -1,4 +1,7 @@
 ﻿using System.Linq;
+using GherkinCore.Base.Model;
+using GherkinCore.Base.Pipelines;
+using GherkinCore.Common.Extensions;
 using Sitecore;
 using Sitecore.Shell.Framework.Commands;
 
@@ -15,7 +18,7 @@ namespace GherkinCore.Base.Commands
                 return;
             }
 
-            if (!testRunItem.IsTemplate(Constants.TestGroupTemplate.TempalteID))
+            if (!testRunItem.IsTemplate(GherkinCore.Common.Constants.TestGroupTemplate.TempalteID))
             {
                 return;
             }

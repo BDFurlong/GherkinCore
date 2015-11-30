@@ -49,7 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenNavigateBackwards.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenNavigateForward.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenNavigateRefresh.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateToItem.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenNavigateToUrl.cs" />
     <Compile Include="Rules\Selenium\Conditions\GivenDriverCondition.cs" />
   </ItemGroup>
   <ItemGroup>
