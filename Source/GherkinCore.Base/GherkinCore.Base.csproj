@@ -67,9 +67,11 @@
     <Compile Include="Rules\GherkinCoreRuleContext.cs" />
     <Compile Include="Util\DriverFactory.cs" />
     <Compile Include="Util\DriverManager.cs" />
+    <Compile Include="Util\SeleniumLocatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App_Config\Include\Commands\GherkinCore.RunTests.config" />
+    <None Include="App_Config\Include\GherkinCore.Settings.config" />
     <None Include="App_Config\Include\Pipelines\GherkinCore.ReportingPipeline.config">
       <SubType>Designer</SubType>
     </None>

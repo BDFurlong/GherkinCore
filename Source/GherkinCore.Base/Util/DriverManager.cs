@@ -24,5 +24,12 @@ namespace GherkinCore.Base.Util
             }
             return Driver;
         }
+
+        public static Screenshot TakeScreenshot()
+        {
+            //TODO: This needs to change, can end up in a situation with a null
+            var screenshot = ((ITakesScreenshot) Driver).GetScreenshot();
+            return screenshot;
+        }
     }
 }

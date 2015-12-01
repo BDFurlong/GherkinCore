@@ -49,6 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenCurrentElementClicked.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenCurrentElementSentKeys.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenCurrentElementSubmitted.cs" />
+    <Compile Include="Rules\Selenium\Actions\WhenElementFound.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateBackwards.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateForward.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenNavigateRefresh.cs" />
