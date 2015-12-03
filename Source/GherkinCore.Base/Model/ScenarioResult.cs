@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace GherkinCore.Base.Model
 {
@@ -6,6 +7,10 @@ namespace GherkinCore.Base.Model
     {
         public IEnumerable<TestStep> TestSteps { get; set; }
         public string Description { get; set; }
-        public bool Passed { get; set; }
+
+        public bool Passed()
+        {
+            return TestSteps.Last().Passed;
+        }
     }
 }

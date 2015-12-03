@@ -2,7 +2,6 @@
 using GherkinCore.Common;
 using Sitecore.Data;
 using Sitecore.Resources.Media;
-using Sitecore.Shell.Web.UI.WebControls;
 using Sitecore.StringExtensions;
 
 namespace GherkinCore.Base.Pipelines
@@ -24,21 +23,24 @@ namespace GherkinCore.Base.Pipelines
                 foreach (var scenario in feature.ScenarioResults)
                 {
                     stringBuilder.Append(scenario.Description);
+                    stringBuilder.Append("<p></p>");
+                    stringBuilder.Append("Passed: ");
+                    stringBuilder.Append(scenario.Passed().ToString());
+                    
+
                     foreach (var testStep in scenario.TestSteps)
                     {
                         if (testStep.ScreenShotItem != null)
                         {
-                            stringBuilder.Append("<p>&nbsp;</p>");
-
+                            if (!testStep.StepDescription.IsNullOrEmpty())
+                            {
+                                stringBuilder.Append("<p>" + testStep.StepDescription + "</p>");
+                            }
                             stringBuilder.Append("<img src=\"");
                             stringBuilder.Append(MediaManager.GetMediaUrl(testStep.ScreenShotItem));
                            
                             stringBuilder.Append("\"");
                             stringBuilder.Append(">");
-                            if (!testStep.StepDescription.IsNullOrEmpty())
-                            {
-                                stringBuilder.Append("<p>" + testStep.StepDescription + "</p>");
-                            }
                         }
                     }
                 }

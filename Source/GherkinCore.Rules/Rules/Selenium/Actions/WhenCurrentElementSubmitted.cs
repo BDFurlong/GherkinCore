@@ -14,6 +14,7 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
             }
 
             ruleContext.CurrentElement.Submit();
+
         }
     }
 }

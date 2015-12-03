@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\Selenium\Actions\ThenAlwaysTrue.cs" />
+    <Compile Include="Rules\Selenium\Actions\ThenCurrentElementValueShouldMatchField.cs" />
     <Compile Include="Rules\Selenium\Actions\ThenTheTitleIs.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenCurrentElementClicked.cs" />
     <Compile Include="Rules\Selenium\Actions\WhenCurrentElementSentKeys.cs" />

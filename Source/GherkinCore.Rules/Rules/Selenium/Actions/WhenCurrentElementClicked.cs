@@ -19,7 +19,7 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
             var testStep = new TestStep();
             testStep.Passed = true;
             testStep.Screenshot = DriverManager.TakeScreenshot();
-            testStep.StepDescription = $"Click on current element";
+            testStep.StepDescription = "Click on current element";
             ruleContext.TestSteps.Add(testStep);
         }
     }

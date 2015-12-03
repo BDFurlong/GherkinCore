@@ -14,6 +14,8 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
             var testStep = new TestStep();
             testStep.Passed = DriverManager.GetDriver().Title == Value;
             testStep.StepDescription = $"Title is currently equal to {Value} and the test has {testStep.Passed}";
+            testStep.Screenshot = DriverManager.TakeScreenshot();
+            ruleContext.TestSteps.Add(testStep);
         }
     }
 }

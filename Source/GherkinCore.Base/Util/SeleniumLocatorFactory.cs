@@ -29,6 +29,9 @@ namespace GherkinCore.Base.Util
                 case "{0604D2B7-7720-49A9-BF61-CBB9A41977B7}":
                     return By.XPath(locatorValue);
 
+                case "{20C0DC8A-3915-486B-8587-D08FA1A0AC4C}":
+                    return By.TagName(locatorValue);
+
                 default:
                     return By.ClassName(locatorValue);
             }

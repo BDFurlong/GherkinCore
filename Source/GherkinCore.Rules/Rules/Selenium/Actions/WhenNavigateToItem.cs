@@ -20,9 +20,15 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
                 return;
             }
 
-            //ruleContext.Driver.Url = "http://gherkincoredemo" + LinkManager.GetItemUrl(navigationItem);
-            DriverManager.GetDriver().Navigate().GoToUrl("http://gherkincoredemo" + LinkManager.GetItemUrl(navigationItem));
-            
+            //TODO: LinkManager
+            var navigationUrl = LinkManager.GetItemUrl(navigationItem, new UrlOptions()
+            {
+                AlwaysIncludeServerUrl = true,
+                Site = Sitecore.Sites.SiteContext.GetSite("mysite")
+            });
+
+            DriverManager.GetDriver().Navigate().GoToUrl(navigationUrl);
+
             var testStep = new TestStep();
             testStep.Passed = true;
             testStep.Screenshot = DriverManager.TakeScreenshot();
