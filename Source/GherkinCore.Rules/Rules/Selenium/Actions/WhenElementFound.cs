@@ -1,4 +1,5 @@
-﻿using GherkinCore.Base.Rules;
+﻿using GherkinCore.Base.Model;
+using GherkinCore.Base.Rules;
 using GherkinCore.Base.Util;
 using Sitecore.Rules.Actions;
 
@@ -12,7 +13,15 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
 
         public override void Apply(T ruleContext)
         {
-            ruleContext.CurrentElement = ruleContext.Driver.FindElement(SeleniumLocatorFactory.GetLocator(Locator, Value));
+            var locateBy = SeleniumLocatorFactory.GetLocator(TemplateId, Value);
+            
+            ruleContext.CurrentElement = DriverManager.GetDriver().FindElement(locateBy);
+
+            var testStep = new TestStep();
+            testStep.Passed = true;
+            testStep.Screenshot = DriverManager.TakeScreenshot();
+            testStep.StepDescription = $"Element with  {Value} found";
+            ruleContext.TestSteps.Add(testStep);
         }
     }
 }

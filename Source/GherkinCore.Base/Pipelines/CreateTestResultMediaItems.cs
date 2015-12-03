@@ -1,7 +1,9 @@
 ﻿using System.IO;
+using Sitecore.Buckets.Managers;
 using Sitecore.Data;
 using Sitecore.Resources.Media;
 using Sitecore.SecurityModel;
+using Sitecore.Shell.Applications.ContentEditor;
 using DateTime = System.DateTime;
 
 namespace GherkinCore.Base.Pipelines
@@ -28,14 +30,16 @@ namespace GherkinCore.Base.Pipelines
 
                         using (new SecurityDisabler())
                         {
-                            var mediaPath =  "TestThis.png";
+                            var mediaPath = "Test";
+                            
                             mediaOptions.Destination = mediaPath;
                             var item = mediaCreator.CreateFromStream(screenShotStream, mediaPath,
                                 mediaOptions);
                             item.Editing.BeginEdit();
-                            item.Fields["Media"].SetBlobStream(screenShotStream);
+                            item.Name = Integer.GetUniqueID(args.TestSettings.TestName);
                             item.Editing.EndEdit();
-
+                            BucketManager.MoveItemIntoBucket(item, imageBucket);
+                            testStep.ScreenShotItem = item;
                         }
                         
                     }

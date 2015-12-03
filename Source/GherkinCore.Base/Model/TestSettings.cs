@@ -10,6 +10,7 @@ namespace GherkinCore.Base.Model
         public Database TestContentDatabase { get; set; }
         public Item ImageBucket { get; private set; }
         public Item ReportBucket { get; set; }
+        public string TestName { get; set; }
 
         public TestSettings(Item testSettingsItem)
         {
@@ -27,6 +28,8 @@ namespace GherkinCore.Base.Model
 
             var reportItemId = testSettingsItem.Fields[Constants.TestSettingsTemplate.Fields.ReportBucket].Value;
             ReportBucket = Sitecore.Context.ContentDatabase.GetItem(ID.Parse(reportItemId));
+
+            TestName = testSettingsItem.Fields[Constants.TestSettingsTemplate.Fields.ReportName].Value;
         }
     }
 }

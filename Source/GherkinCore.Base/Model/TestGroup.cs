@@ -32,7 +32,7 @@ namespace GherkinCore.Base.Model
         private void GetFeatures()
         {
             MultilistField featureItems = TestGroupItem.Fields[Constants.TestGroupTemplate.Fields.Features];
-            Features = featureItems.GetItems().Select(i => new Feature(i, TestSettings));
+            Features = featureItems.GetItems().Select(i => new Feature(i, TestSettings)).ToList();
         }
     }
 }

@@ -41,6 +41,7 @@
             {
                 public const string Features = "Features";
                 public const string TargetSite = "Target Site";
+               
             }
         }
 
@@ -58,6 +59,7 @@
                 public const string ImageBucket = "Image Bucket";
                 public const string BaseUrl = "Base Url";
                 public const string ReportBucket = "Report Bucket";
+                public const string ReportName = "Report Name";
             }
         }
 

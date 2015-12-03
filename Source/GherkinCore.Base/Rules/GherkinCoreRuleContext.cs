@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using GherkinCore.Base.Model;
+using GherkinCore.Base.Util;
 using GherkinCore.Common;
 using GherkinCore.Interfaces;
 using OpenQA.Selenium;
@@ -13,7 +14,6 @@ namespace GherkinCore.Base.Rules
 {
     public class GherkinRuleContext : RuleContext
     {
-        public IWebDriver Driver { get; set; }
         public ITestActor TestActor { get; set; }
         public List<TestStep> TestSteps { get; set; }
         public IWebElement CurrentElement { get; set; }
@@ -24,8 +24,6 @@ namespace GherkinCore.Base.Rules
         {
             TestSteps = new List<TestStep>();
             ContentDatabase = Sitecore.Context.ContentDatabase;
-            //TODO retrive driver using manager and make default driver PhantomJs
-            Driver = new PhantomJSDriver(Constants.PhantomJSSettings.Path);
             TestSettings = settings;
         }
 

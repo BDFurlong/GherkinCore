@@ -1,4 +1,5 @@
-﻿using GherkinCore.Base.Rules;
+﻿using GherkinCore.Base.Model;
+using GherkinCore.Base.Rules;
 using GherkinCore.Base.Util;
 using Sitecore.Rules.Actions;
 
@@ -14,7 +15,12 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
                 return;
             }
             ruleContext.CurrentElement.Click();
-            
+
+            var testStep = new TestStep();
+            testStep.Passed = true;
+            testStep.Screenshot = DriverManager.TakeScreenshot();
+            testStep.StepDescription = $"Click on current element";
+            ruleContext.TestSteps.Add(testStep);
         }
     }
 }

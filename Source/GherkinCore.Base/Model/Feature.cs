@@ -18,8 +18,9 @@ namespace GherkinCore.Base.Model
         {
             FeatureItem = item;
             Description = FeatureDescription();
-            Scenarios = GetScenarios();
             TestSettings = settings;
+            Scenarios = GetScenarios();
+            
         }
 
         public FeatureResult RunFeature()

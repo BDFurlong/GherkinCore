@@ -16,6 +16,7 @@ namespace GherkinCore.Base.Model
 
         public Scenario(Item item, TestSettings settings)
         {
+            TestSettings = settings;
             ScenarioItem = item;
             CreateRuleContext();
         }

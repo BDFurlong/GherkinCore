@@ -15,7 +15,7 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
                 Screenshot = DriverManager.TakeScreenshot()
             });
 
-            ruleContext.Driver.Close();
+            
         }
     }
 }

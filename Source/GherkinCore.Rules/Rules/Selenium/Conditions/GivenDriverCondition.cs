@@ -16,8 +16,8 @@ namespace GherkinCore.Rules.Rules.Selenium.Conditions
             {
                 return false;
             }
-
-            ruleContext.Driver = DriverManager.GetDriver(driverItem.DisplayName);
+           
+            DriverManager.GetDriver(driverItem.DisplayName);
 
             return true;
         }
