@@ -3,6 +3,7 @@ using GherkinCore.Base.Model;
 using GherkinCore.Base.Pipelines;
 using GherkinCore.Common.Extensions;
 using Sitecore;
+using Sitecore.Pipelines;
 using Sitecore.Shell.Framework.Commands;
 
 namespace GherkinCore.Base.Commands
@@ -25,8 +26,12 @@ namespace GherkinCore.Base.Commands
             var testGroup = new TestGroup(testRunItem);
             var results = testGroup.TestFeatures();
 
-            var pipelineArgs = new GherkinCoreReportingPipelineArgs { Results = results };
-            //CorePipeline.Run(Constants.GherkinCoreReportingPipeline.Pipeline, pipelineArgs);
+            var pipelineArgs = new GherkinCoreReportingPipelineArgs { Results = results, TestSettings = testGroup.TestSettings};
+
+            //TODO: move to constants
+            CorePipeline.Run("GherkinCoreReporting", pipelineArgs);
+
+           
         }
     }
 }

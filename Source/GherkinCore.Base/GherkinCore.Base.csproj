@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Sitecore.Buckets">
+      <HintPath>..\..\Lib\Sitecore\Sitecore81\Sitecore.Buckets.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Client">
       <HintPath>..\..\Lib\Sitecore\Sitecore81\Sitecore.Client.dll</HintPath>
     </Reference>
@@ -62,6 +65,8 @@
     <Compile Include="Model\TestGroup.cs" />
     <Compile Include="Model\TestSettings.cs" />
     <Compile Include="Model\TestStep.cs" />
+    <Compile Include="Pipelines\CreateNewHtmlReport.cs" />
+    <Compile Include="Pipelines\CreateTestResultMediaItems.cs" />
     <Compile Include="Pipelines\GherkinCoreReportingPipelineArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\GherkinCoreRuleContext.cs" />
@@ -70,7 +75,9 @@
     <Compile Include="Util\SeleniumLocatorFactory.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App_Config\Include\Commands\GherkinCore.RunTests.config" />
+    <None Include="App_Config\Include\Commands\GherkinCore.RunTests.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App_Config\Include\GherkinCore.Settings.config" />
     <None Include="App_Config\Include\Pipelines\GherkinCore.ReportingPipeline.config">
       <SubType>Designer</SubType>

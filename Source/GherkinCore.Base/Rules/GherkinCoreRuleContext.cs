@@ -15,28 +15,33 @@ namespace GherkinCore.Base.Rules
     {
         public IWebDriver Driver { get; set; }
         public ITestActor TestActor { get; set; }
-        public IEnumerable<TestStep> TestSteps { get; set; }
+        public List<TestStep> TestSteps { get; set; }
         public IWebElement CurrentElement { get; set; }
         public Database ContentDatabase { get; set; }
+        public TestSettings TestSettings { get; set; }
 
         public GherkinRuleContext(TestSettings settings)
         {
             TestSteps = new List<TestStep>();
             ContentDatabase = Sitecore.Context.ContentDatabase;
+            //TODO retrive driver using manager and make default driver PhantomJs
             Driver = new PhantomJSDriver(Constants.PhantomJSSettings.Path);
+            TestSettings = settings;
         }
 
+        //TODO: move this or refactor
         public Item GetConfiguratioItem(string id)
         {
             return GetItem(id, ContentDatabase);
         }
-
+        //TODO: move this or refactor
         public Item GetContentItem(string id)
         {
             //TODO: make the db configurable from test settings
-            return GetItem(id, Sitecore.Configuration.Factory.GetDatabase("web"));
+            return GetItem(id, TestSettings.TestContentDatabase);
         }
 
+        //TODO: move this or refactor
         private Item GetItem(string id, Database database)
         {
             ID itemId;

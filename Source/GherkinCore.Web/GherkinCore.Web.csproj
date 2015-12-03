@@ -80,6 +80,24 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GherkinCore.Base\GherkinCore.Base.csproj">
+      <Project>{c24ffe96-7fe3-44d9-ba8e-b84874b579da}</Project>
+      <Name>GherkinCore.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GherkinCore.Common\GherkinCore.Common.csproj">
+      <Project>{17f974ea-a81d-4f65-ae04-e951f3236a9f}</Project>
+      <Name>GherkinCore.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GherkinCore.Interfaces\GherkinCore.Interfaces.csproj">
+      <Project>{493aa6ce-4047-4d56-9cdf-365fe925ec04}</Project>
+      <Name>GherkinCore.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GherkinCore.Rules\GherkinCore.Rules.csproj">
+      <Project>{8b14974b-5117-4a4c-90e6-9c2a35c3aa56}</Project>
+      <Name>GherkinCore.Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

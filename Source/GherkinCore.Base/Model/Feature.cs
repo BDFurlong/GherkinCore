@@ -12,12 +12,14 @@ namespace GherkinCore.Base.Model
         public string Description { get; set; }
         public IEnumerable<Scenario> Scenarios { get; set; }
         public Item FeatureItem { get; set; }
+        private TestSettings TestSettings { get; set; }
 
-        public Feature(Item item)
+        public Feature(Item item, TestSettings settings)
         {
             FeatureItem = item;
             Description = FeatureDescription();
             Scenarios = GetScenarios();
+            TestSettings = settings;
         }
 
         public FeatureResult RunFeature()
@@ -31,15 +33,14 @@ namespace GherkinCore.Base.Model
 
         private string FeatureDescription()
         {
-            //TODO: move to constants
-            return FeatureItem.Fields["Feature Description"].Value;
+            return FeatureItem.Fields[Constants.FeatureTemplate.Fields.FeatureDescription].Value;
         }
 
         private IEnumerable<Scenario> GetScenarios()
         {
             var scenarioItems = FeatureItem.Children.Where(i => i.IsTemplate(Constants.ScenarioTemplate.TemplateId));
 
-            return scenarioItems.Select(i => new Scenario(i));
+            return scenarioItems.Select(i => new Scenario(i, TestSettings));
         }
 
         private IEnumerable<ScenarioResult> RunScenarios()

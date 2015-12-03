@@ -12,8 +12,9 @@ namespace GherkinCore.Base.Model
     {
         public Item ScenarioItem { get; set; }
         private GherkinRuleContext RuleContext { get; set; }
+        private TestSettings TestSettings { get; set; }
 
-        public Scenario(Item item)
+        public Scenario(Item item, TestSettings settings)
         {
             ScenarioItem = item;
             CreateRuleContext();
@@ -35,7 +36,7 @@ namespace GherkinCore.Base.Model
 
         public ScenarioResult RunScenario()
         {
-            var rule = RuleFactory.GetRules<GherkinRuleContext>(ScenarioItem, Constants.ScenarioTemplate.Fields.Scenario);
+            var rule = RuleFactory.GetRules<GherkinRuleContext>(ScenarioItem.Fields[Constants.ScenarioTemplate.Fields.Scenario]);
             rule.Run(RuleContext);
             return CreateScenarioResult();
 
@@ -43,7 +44,7 @@ namespace GherkinCore.Base.Model
 
         private void CreateRuleContext()
         {
-            RuleContext = new GherkinRuleContext(new TestSettings());
+            RuleContext = new GherkinRuleContext(TestSettings);
         }
 
         private ScenarioResult CreateScenarioResult()

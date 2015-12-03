@@ -1,4 +1,5 @@
 ﻿using GherkinCore.Base.Rules;
+using GherkinCore.Base.Util;
 using Sitecore.Rules.Actions;
 
 namespace GherkinCore.Rules.Rules.Selenium.Actions
@@ -12,8 +13,8 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
                 //TODO: Fail Test
                 return;
             }
-
             ruleContext.CurrentElement.Click();
+            
         }
     }
 }

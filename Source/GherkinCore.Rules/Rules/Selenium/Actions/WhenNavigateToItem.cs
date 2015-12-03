@@ -17,7 +17,7 @@ namespace GherkinCore.Rules.Rules.Selenium.Actions
                 return;
             }
 
-            ruleContext.Driver.Url = LinkManager.GetItemUrl(navigationItem);
+            ruleContext.Driver.Url = "http://gherkincoredemo";
             ruleContext.Driver.Navigate();
         }
     }
